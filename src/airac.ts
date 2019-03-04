@@ -24,7 +24,7 @@ export class Cycle {
         const yearPart = parseInt(match[1]);
         const ordinalPart = parseInt(match[2]);
         let year: number;
-        if (yearPart > 63) {
+        if (yearPart > 79) {
             year = 1900 + yearPart;
         } else {
             year = 2000 + yearPart;

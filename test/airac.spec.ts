@@ -2,7 +2,7 @@ import { assert } from "chai";
 import { Cycle } from "../src/airac";
 import { InvalidCycleIdentifierError } from "../src/errors";
 
-describe("Cycle.fromDate()", () => {
+describe("Cycle creation from date", () => {
     it("should create valid dates for mid-cycle input", () => {
         const date = new Date(Date.UTC(2019, 2, 14));
         const cycle = Cycle.fromDate(date);
@@ -38,7 +38,7 @@ describe("Cycle.fromDate()", () => {
     });
 });
 
-describe("Cycle.fromIdentifier()", () => {
+describe("Cycle creation from identifier", () => {
     it("should validate cycle identifier pattern", () => {
         assert.throws(() => Cycle.fromIdentifier(""), InvalidCycleIdentifierError);
         assert.throws(() => Cycle.fromIdentifier("ASDF"), InvalidCycleIdentifierError);
@@ -60,5 +60,17 @@ describe("Cycle.fromIdentifier()", () => {
         assert.equal(cycle.identifier, "1903");
         assert.equal(cycle.effectiveStart.getTime(), new Date(Date.UTC(2019, 1, 28)).getTime());
         assert.equal(cycle.effectiveEnd.getTime(), new Date(Date.UTC(2019, 2, 27)).getTime());
+    });
+    it("should be valid from cycle 1 in 1980", () => {
+        const cycle = Cycle.fromIdentifier("8001");
+
+        assert.equal(cycle.effectiveStart.getTime(), new Date(Date.UTC(1980, 0, 24)).getTime());
+        assert.equal(cycle.effectiveEnd.getTime(), new Date(Date.UTC(1980, 1, 20)).getTime());
+    });
+    it("should be valid to cycle 13 in 2079", () => {
+        const cycle = Cycle.fromIdentifier("7913");
+
+        assert.equal(cycle.effectiveStart.getTime(), new Date(Date.UTC(2079, 11, 14)).getTime());
+        assert.equal(cycle.effectiveEnd.getTime(), new Date(Date.UTC(2080, 0, 10)).getTime());
     });
 });
