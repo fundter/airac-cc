@@ -1,0 +1,16 @@
+{
+  "name": "airac",
+  "version": "1.0.0",
+  "description": "Utility for AIRAC cycle calculations",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^11.10.4",
+    "typescript": "^3.3.3333"
+  }
+}
