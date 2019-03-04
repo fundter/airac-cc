@@ -2,5 +2,7 @@ node_modules
 dist
 @types
 .vscode
+coverage
+.nyc_output
 
 .DS_Store
