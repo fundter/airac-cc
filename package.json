@@ -8,6 +8,8 @@
   },
   "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node .",
     "test": "mocha --require ts-node/register test/**/*.ts",
     "coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/**/*.ts"
   },
