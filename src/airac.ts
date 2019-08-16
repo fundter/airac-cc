@@ -65,7 +65,7 @@ export class Cycle {
 
     public printInfo(): void {
         console.log(`AIRAC cycle: ${this.identifier}`);
-        console.log(`Effective from (inc.): ${this.effectiveStart.toLocaleDateString()}`);
-        console.log(`Effective to (inc.): ${this.effectiveEnd.toLocaleDateString()}`);
+        console.log(`Effective from: ${this.effectiveStart.toLocaleDateString()}`);
+        console.log(`Effective to (including): ${this.effectiveEnd.toLocaleDateString()}`);
     }
 }
