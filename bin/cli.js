@@ -8,21 +8,28 @@ const isoDatePattern = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 
 const args = yargs
     .usage("Usage: $0 [-i <airac-identifier>|-d <iso-date>]")
-    .alias("i", "identifier")
-    .describe("i", "AIRAC identifier to use (e.g. '1909')")
-    .string("i")
-    .alias("d", "date")
-    .describe("d", "Date in ISO format to use (e.g. '2019-08-15')")
-    .string("d")
-    .conflicts("identifier", "date")
+    .option("i", {
+        alias: "identifier",
+        describe: "AIRAC identifier to use (e.g. '1909')",
+        type: "string",
+        requiresArg: true
+    })
+    .option("d", {
+        alias: "date",
+        describe: "Date in ISO format to use (e.g. '2019-08-15')",
+        type: "string",
+        requiresArg: true
+    })
+    .conflicts("i", "d")
     .help("h")
     .alias("h", "help")
+    .version("version", "Show version", `airac v${airacInfo.version}`)
+    .alias("v", "version")
     .example("$0", "Prints the AIRAC cycle for the current date.")
     .example("$0 -i <airac-identifier>", "Prints the AIRAC cycle identified by the given AIRAC identifier")
     .example("$0 -d <iso-date>", "Prints the AIRAC cycle for the given date")
-    .version("version", "Show version", `airac v${airacInfo.version}`)
-    .alias("v", "version")
     .locale("en")
+    .strict()
     .argv;
 
 if (args.identifier) {
