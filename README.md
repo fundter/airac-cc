@@ -11,16 +11,30 @@ After clone, run
 
 to compile.
 
+## Install
+
+To install the AIRAC cycle calculator globally on the system, run
+
+    npm install -g .
+
+This will make the CLI called 'airac' available.
+
 ## Usage
 
 Run
 
-    npm start
+    airac
 
-to print information of the currently effective cycle. You can also run
+to print information of the currently effective AIRAC cycle. You can also run
 
-    npm start <Cycle-Identifier>
+    airac -i <airac-identifier>
 
-to print information of a specific cycle, e.g.
+to print information of a specific cycle identified by the given AIRAC identifier (e.g. `airac -i 1909`), or
 
-    npm start 1903
+    airac -d <iso-date>
+
+to print information of a specific cycle identified by the given date in ISO format (e.g. `airac -d 2019-08-15`). Finally, run
+
+    airac -h
+
+to print the help.
