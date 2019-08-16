@@ -62,4 +62,10 @@ export class Cycle {
     private constructor(serial: number) {
         this.serial = serial;
     }
+
+    public printInfo(): void {
+        console.log(`AIRAC cycle: ${this.identifier}`);
+        console.log(`Effective from (inc.): ${this.effectiveStart.toLocaleDateString()}`);
+        console.log(`Effective to (inc.): ${this.effectiveEnd.toLocaleDateString()}`);
+    }
 }
