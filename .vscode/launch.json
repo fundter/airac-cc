@@ -7,11 +7,12 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Debug index",
+            "name": "Debug",
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"
             ],
-            "program": "${workspaceFolder}/dist/index.js"
+            "program": "${workspaceFolder}/bin/cli.js",
+            "args": ["-d", "2020-01-01"]
         },
         {
             "type": "node",
