@@ -7,4 +7,4 @@ export const millisPerCycle = daysPerCycle * millisPerDay;
 
 export function matchAiracIdentifier(identifier: string): RegExpMatchArray | null {
     return identifier.match(cycleIdentifierPattern);
-};
+}

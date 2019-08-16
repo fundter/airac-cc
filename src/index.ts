@@ -20,5 +20,5 @@ if (require.main === module) {
 
 export {
     Cycle,
-    InvalidCycleIdentifierError
+    InvalidCycleIdentifierError,
 };
