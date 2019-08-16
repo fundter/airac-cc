@@ -7,6 +7,9 @@
     "url": "https://github.com/fundter/airac.git"
   },
   "main": "dist/index.js",
+  "bin": {
+    "airac": "./bin/cli.js"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node .",
