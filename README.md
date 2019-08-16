@@ -7,7 +7,7 @@ This [Node.js](https://nodejs.org/en/) module calculates Aeronautical Informatio
 After clone, run
 
     npm install
-    node_modules/.bin/tsc
+    npm run build
 
 to compile.
 
@@ -15,12 +15,12 @@ to compile.
 
 Run
 
-    node .
+    npm start
 
 to print information of the currently effective cycle. You can also run
 
-    node . <Cycle-Identifier>
+    npm start <Cycle-Identifier>
 
 to print information of a specific cycle, e.g.
 
-    node . 1903
+    npm start 1903
