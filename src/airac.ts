@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import { InvalidCycleIdentifierError } from "./errors";
 import { base, matchAiracIdentifier, millisPerCycle, millisPerDay } from "./utils";
 
@@ -64,8 +65,8 @@ export class Cycle {
     }
 
     public printInfo(): void {
-        console.log(`AIRAC cycle: ${this.identifier}`);
-        console.log(`Effective from: ${this.effectiveStart.toLocaleDateString()}`);
-        console.log(`Effective to (including): ${this.effectiveEnd.toLocaleDateString()}`);
+        console.log(`AIRAC cycle: ${chalk.bgBlue.white.bold(` ${this.identifier} `)}`);
+        console.log(`Effective from: ${chalk.blue.bold(this.effectiveStart.toLocaleDateString())}`);
+        console.log(`Effective to (incl.): ${chalk.blue.bold(this.effectiveEnd.toLocaleDateString())}`);
     }
 }
