@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
-    "start": "node .",
+    "start": "dist/bin/cli.js",
     "test": "mocha --require ts-node/register test/**/*.ts",
     "coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/**/*.ts"
   },
