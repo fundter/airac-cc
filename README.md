@@ -22,7 +22,7 @@ Print out the AIRAC cycle identifier and the corresponding effectivity dates for
 
     airac-cc -i 1909
 
-*__Note__: when using the `-i` option, this module will only consider AIRAC identifiers between January 1st 1980 and December 31st 2079. Therefore, cycle 7501 will be considred to be the first cycle of 2075, not 1975! If you want to calculate effectifity dates outside of this range, use the `-d` option (see below)* 
+*__Note__: when using the `-i` option, this module will only consider AIRAC identifiers between January 1st 1980 and December 31st 2079. Therefore, cycle 7501 will be considred to be the first cycle of 2075, not 1975! If you want to calculate effectifity dates outside of this range, use the `-d` option (see below).* 
 
 Print out the AIRAC cycle identifier and the corresponding effectivity dates for the cycle that's effective on a specific date (specify the date in [ISO](https://www.iso.org/iso-8601-date-and-time-format.html) format):
 
