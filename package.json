@@ -8,7 +8,7 @@
   },
   "main": "dist/index.js",
   "bin": {
-    "airac": "./bin/cli.js"
+    "airac": "dist/bin/cli.js"
   },
   "scripts": {
     "build": "tsc",

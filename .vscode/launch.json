@@ -11,8 +11,7 @@
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"
             ],
-            "program": "${workspaceFolder}/bin/cli.js",
-            "args": ["-d", "2020-01-01"]
+            "program": "${workspaceFolder}/dist/bin/cli.js",
         },
         {
             "type": "node",

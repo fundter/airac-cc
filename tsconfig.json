@@ -1,20 +1,15 @@
 {
     "compilerOptions": {
         "declaration": true,
-        "declarationDir": "@types",
         "module": "commonjs",
         "noImplicitAny": true,
-        "outDir": "./dist",
+        "outDir": "dist",
+        "rootDir": "src",
         "sourceMap": true,
         "strictNullChecks": true,
-        "target": "es6"
+        "target": "ES2015"
     },
     "include": [
-        "./src/**/*.ts"
-    ],
-    "exclude": [
-        "dist",
-        "node_modules",
-        "test"
+        "src"
     ]
 }
