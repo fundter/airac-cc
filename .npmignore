@@ -1,0 +1,12 @@
+.nyc_output
+.vscode
+coverage
+src
+test
+.nycrc.json
+tsconfig.json
+tslint.json
+.DS_Store
+
+*.js.map
+dist/bin/cli.d.ts

@@ -17,7 +17,7 @@
     "test": "mocha --require ts-node/register test/**/*.ts",
     "coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/**/*.ts"
   },
-  "keywords": [],
+  "keywords": ["airac", "cycle", "effectivity"],
   "author": "David Fundter",
   "license": "ISC",
   "devDependencies": {
