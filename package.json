@@ -1,14 +1,14 @@
 {
-  "name": "airac",
+  "name": "airac-cc",
   "version": "1.0.0",
   "description": "Utility for AIRAC cycle calculations",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fundter/airac.git"
+    "url": "https://github.com/fundter/airac-cc.git"
   },
   "main": "dist/index.js",
   "bin": {
-    "airac": "dist/bin/cli.js"
+    "airac-cc": "dist/bin/cli.js"
   },
   "scripts": {
     "build": "tsc",
