@@ -1,40 +1,29 @@
-# AIRAC cycle calculator
+# airac-cc (AIRAC cycle calculator)
 
-This [Node.js](https://nodejs.org/en/) module calculates Aeronautical Information Regulation And Control (AIRAC) cycle identifiers and effective dates as defined by the International Civil Aviation Organization (ICAO).
-
-## Build
-
-After clone, run
-
-    npm install
-    npm run build
-
-to compile.
+This module can be used to calculate Aeronautical Information Regulation And Control (AIRAC) cycle identifiers and effectivity dates as defined by the International Civil Aviation Organization (ICAO).
 
 ## Install
 
-To install the AIRAC cycle calculator globally on the system, run
+Install globally via
 
-    npm install -g .
+    npm install -g airac-cc
 
-This will make the CLI called 'airac' available.
+This will install the comman `airac-cc` globally on your system.
 
 ## Usage
 
-Run
+Print out the AIRAC cycle identifier and the corresponding effectivity dates of the currently effective AIRAC cycle to the console:
 
-    airac
+    airac-cc
 
-to print information of the currently effective AIRAC cycle. You can also run
+Print out the AIRAC cycle identifier and the corresponding effectivity dates for a specific AIRAC cycle (identified by the cycle name):
 
-    airac -i <airac-identifier>
+    airac-cc -i 1909
 
-to print information of a specific cycle identified by the given AIRAC identifier (e.g. `airac -i 1909`), or
+Print out the AIRAC cycle identifier and the corresponding effectivity dates for the cycle that's effective on a specific date (specify the date in [ISO](https://www.iso.org/iso-8601-date-and-time-format.html) format):
 
-    airac -d <iso-date>
+    airac-cc -d 2019-08-15
 
-to print information of a specific cycle identified by the given date in ISO format (e.g. `airac -d 2019-08-15`). Finally, run
+Print the help for the module:
 
-    airac -h
-
-to print the help.
+    airac-cc -h
