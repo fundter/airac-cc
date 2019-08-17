@@ -17,7 +17,7 @@
     "test": "mocha --require ts-node/register test/**/*.ts",
     "coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/**/*.ts"
   },
-  "keywords": ["airac", "cycle", "effectivity"],
+  "keywords": ["airac", "aip", "icao", "airac-cycle", "effectivity", "aeronautic", "navigation"],
   "author": "David Fundter",
   "license": "ISC",
   "devDependencies": {
