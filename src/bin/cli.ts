@@ -26,7 +26,7 @@ const args = yargs
     .conflicts("i", "d")
     .help("h")
     .alias("h", "help")
-    .version("version", "Show version", `airac v${moduleInfo.version}`)
+    .version("version", "Show version", `${moduleInfo.name} v${moduleInfo.version}`)
     .alias("v", "version")
     .example("$0", "Prints the AIRAC cycle for the current date.")
     .example("$0 -i <airac-identifier>", "Prints the AIRAC cycle identified by the given AIRAC identifier")

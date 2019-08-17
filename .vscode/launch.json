@@ -12,6 +12,7 @@
                 "${workspaceFolder}/dist/**/*.js"
             ],
             "program": "${workspaceFolder}/dist/bin/cli.js",
+            "runtimeExecutable": "/usr/local/bin/node",
         },
         {
             "type": "node",
@@ -25,7 +26,8 @@
                 "999999",
                 "--colors",
                 "${workspaceFolder}/test/**/*.ts",
-            ]
+            ],
+            "runtimeExecutable": "/usr/local/bin/node"
         }
     ]
 }
