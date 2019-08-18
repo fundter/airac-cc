@@ -1,5 +1,8 @@
 # airac-cc (AIRAC cycle calculator)
 
+[![Build Status](https://travis-ci.org/fundter/airac-cc.svg?branch=master)](https://travis-ci.org/fundter/airac-cc)
+[![Coverage Status](https://coveralls.io/repos/github/fundter/airac-cc/badge.svg?branch=master)](https://coveralls.io/github/fundter/airac-cc?branch=master)
+
 This module can be used to calculate Aeronautical Information Regulation And Control (AIRAC) cycle identifiers and effectivity dates as defined by the International Civil Aviation Organization (ICAO). A list of current AIRAC effectivity dates can be found [here](https://www.nm.eurocontrol.int/RAD/common/airac_dates.html).
 
 The code of this module is based on a similar [Java library](https://github.com/jwkohnen/airac-java/) written by Johannes Kohnen.
