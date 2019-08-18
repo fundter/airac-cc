@@ -15,7 +15,8 @@
     "build:watch": "tsc -w",
     "start": "dist/bin/cli.js",
     "test": "mocha --require ts-node/register test/**/*.ts",
-    "coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/**/*.ts"
+    "coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/**/*.ts",
+    "coverage-ci": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/**/*.ts && nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "airac",
@@ -34,6 +35,7 @@
     "@types/node": "^11.10.4",
     "@types/yargs": "^13.0.2",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.6",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "source-map-support": "^0.5.10",
