@@ -1,6 +1,6 @@
 {
   "name": "airac-cc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility for AIRAC cycle calculations",
   "repository": {
     "type": "git",
@@ -17,7 +17,15 @@
     "test": "mocha --require ts-node/register test/**/*.ts",
     "coverage": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/**/*.ts"
   },
-  "keywords": ["airac", "aip", "icao", "airac-cycle", "effectivity", "aeronautic", "navigation"],
+  "keywords": [
+    "airac",
+    "aip",
+    "icao",
+    "airac-cycle",
+    "effectivity",
+    "aeronautic",
+    "navigation"
+  ],
   "author": "David Fundter",
   "license": "ISC",
   "devDependencies": {
