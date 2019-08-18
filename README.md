@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/fundter/airac-cc.svg?branch=master)](https://travis-ci.org/fundter/airac-cc)
 [![Coverage Status](https://coveralls.io/repos/github/fundter/airac-cc/badge.svg?branch=master)](https://coveralls.io/github/fundter/airac-cc?branch=master)
+[![Issues](https://img.shields.io/github/issues/fundter/airac-cc)](https://github.com/fundter/airac-cc/issues)
+[![NPM Version](https://img.shields.io/npm/v/airac-cc)](https://npmjs.org/package/airac-cc)
+[![NPM License](https://img.shields.io/npm/l/airac-cc)](https://npmjs.org/package/airac-cc)
 
 This module can be used to calculate Aeronautical Information Regulation And Control (AIRAC) cycle identifiers and effectivity dates as defined by the International Civil Aviation Organization (ICAO). A list of current AIRAC cycle effectivity dates can be found [here](https://www.nm.eurocontrol.int/RAD/common/airac_dates.html).
 
