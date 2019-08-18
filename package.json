@@ -1,6 +1,6 @@
 {
   "name": "airac-cc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utility for AIRAC cycle calculations",
   "repository": {
     "type": "git",
