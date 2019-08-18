@@ -3,6 +3,7 @@
 coverage
 src
 test
+.travis.yml
 .nycrc.json
 tsconfig.json
 tslint.json
