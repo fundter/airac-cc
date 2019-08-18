@@ -6,47 +6,45 @@ The code of this module is based on a similar [Java library](https://github.com/
 
 ## Usage
 
-    const airac = require("airac-cc");
-
-    let cycle;
-
-    try {
-        cycle = airac.Cycle.fromIdentifier("1909");
-        console.log(cycle.effectiveStart);
-        console.log(cycle.effectiveEnd);
-    } catch (error) {
-        if (error instanceof airac.InvalidCycleIdentifierError) {
-            // ...
-        }
-    }
-
-    cycle = airac.Cycle.fromDate(new Date());
-    console.log(cycle.identifier);
+```javascript
+const airac = require("airac-cc");
+let cycle;
+try {
+    cycle = airac.Cycle.fromIdentifier("1909");
     console.log(cycle.effectiveStart);
     console.log(cycle.effectiveEnd);
+} catch (error) {
+    if (error instanceof airac.InvalidCycleIdentifierError) {
+        // ...
+    }
+}
+cycle = airac.Cycle.fromDate(new Date());
+console.log(cycle.identifier);
+console.log(cycle.effectiveStart);
+console.log(cycle.effectiveEnd);
+```
 
 *__Note__: when using the `fromIdentifier` method, this module will only consider AIRAC identifiers between January 1st 1980 and December 31st 2079. Therefore, cycle 7501 will be considred to be the first cycle of 2075, not 1975! If you want to calculate effectifity dates outside of this range, use the `fromDate` method.*
 
 This modules comes with TypeScript definitions. TypeScript version of the above:
 
-    import { Cycle, InvalidCycleIdentifierError } from "airac-cc";
-
-    let cycle;
-
-    try {
-        cycle = Cycle.fromIdentifier("1909");
-        console.log(cycle.effectiveStart);
-        console.log(cycle.effectiveEnd);
-    } catch (error) {
-        if (error instanceof InvalidCycleIdentifierError) {
-            // ...
-        }
-    }
-
-    cycle = Cycle.fromDate(new Date());
-    console.log(cycle.identifier);
+```typescript
+import { Cycle, InvalidCycleIdentifierError } from "airac-cc";
+let cycle;
+try {
+    cycle = Cycle.fromIdentifier("1909");
     console.log(cycle.effectiveStart);
     console.log(cycle.effectiveEnd);
+} catch (error) {
+    if (error instanceof InvalidCycleIdentifierError) {
+        // ...
+    }
+}
+cycle = Cycle.fromDate(new Date());
+console.log(cycle.identifier);
+console.log(cycle.effectiveStart);
+console.log(cycle.effectiveEnd);
+```
 
 ## CLI
 
