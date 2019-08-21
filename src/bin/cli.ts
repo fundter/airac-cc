@@ -7,7 +7,6 @@ import { InvalidCycleIdentifierError } from "../errors";
 import { printCycle } from "../utils";
 
 const isoDatePattern = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
-const moduleInfo = JSON.parse(fs.readFileSync(`${__dirname}/../../package.json`, "utf-8"));
 
 const args = yargs
     .usage("Usage: $0 [-i <airac-identifier>|-d <iso-date>]")
@@ -26,7 +25,7 @@ const args = yargs
     .conflicts("i", "d")
     .help("h")
     .alias("h", "help")
-    .version("version", "Show version", `${moduleInfo.name} v${moduleInfo.version}`)
+    .version()
     .alias("v", "version")
     .example("$0", "Prints the AIRAC cycle for the current date.")
     .example("$0 -i <airac-identifier>", "Prints the AIRAC cycle identified by the given AIRAC identifier")
@@ -35,9 +34,9 @@ const args = yargs
     .strict()
     .argv;
 
-if (args.identifier) {
+if (args.i) {
     try {
-        const cycle = Cycle.fromIdentifier(args.identifier as string);
+        const cycle = Cycle.fromIdentifier(args.i);
         printCycle(cycle);
     } catch (error) {
         if (error instanceof InvalidCycleIdentifierError) {
@@ -47,13 +46,12 @@ if (args.identifier) {
             throw error;
         }
     }
-} else if (args.date) {
-    const date = args.date as string;
-    if (!date.match(isoDatePattern)) {
-        console.error(`Not a valid ISO date string: '${date}'`);
+} else if (args.d) {
+    if (!args.d.match(isoDatePattern)) {
+        console.error(`Not a valid ISO date string: '${args.d}'`);
         process.exit(1);
     }
-    const cycle = Cycle.fromDate(new Date(date));
+    const cycle = Cycle.fromDate(new Date(args.d));
     printCycle(cycle);
 } else {
     const cycle = Cycle.fromDate(new Date());
