@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import { bgBlue, blue } from "chalk";
 import { Cycle } from "./airac";
 
 const daysPerCycle = 28;
@@ -13,7 +13,7 @@ export function matchAiracIdentifier(identifier: string): RegExpMatchArray | nul
 }
 
 export function printCycle(cycle: Cycle): void {
-    console.log(`AIRAC cycle: ${chalk.bgBlue.white.bold(` ${cycle.identifier} `)}`);
-    console.log(`Effective from: ${chalk.blue.bold(cycle.effectiveStart.toLocaleDateString())}`);
-    console.log(`Effective to (incl.): ${chalk.blue.bold(cycle.effectiveEnd.toLocaleDateString())}`);
+    console.log(`AIRAC cycle: ${bgBlue.white.bold(` ${cycle.identifier} `)}`);
+    console.log(`Effective from: ${blue.bold(cycle.effectiveStart.toLocaleDateString())}`);
+    console.log(`Effective to (incl.): ${blue.bold(cycle.effectiveEnd.toLocaleDateString())}`);
 }
