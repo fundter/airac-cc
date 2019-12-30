@@ -1,6 +1,6 @@
 {
   "name": "airac-cc",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Utility for AIRAC cycle calculations",
   "repository": {
     "type": "git",
@@ -30,21 +30,21 @@
   "author": "David Fundter",
   "license": "ISC",
   "devDependencies": {
-    "@types/chai": "^4.2.0",
+    "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.2",
-    "@types/yargs": "^13.0.2",
+    "@types/node": "^12.12.22",
+    "@types/yargs": "^13.0.4",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.6",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
-    "source-map-support": "^0.5.13",
-    "ts-node": "^8.3.0",
-    "tslint": "^5.19.0",
-    "typescript": "^3.5.3"
+    "coveralls": "^3.0.9",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "yargs": "^14.0.0"
+    "chalk": "^3.0.0",
+    "yargs": "^15.0.2"
   }
 }
