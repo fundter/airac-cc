@@ -30,21 +30,21 @@
   "author": "David Fundter",
   "license": "ISC",
   "devDependencies": {
-    "@types/chai": "^4.2.7",
+    "@types/chai": "^4.2.8",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.12.22",
-    "@types/yargs": "^13.0.4",
+    "@types/node": "^12.12.26",
+    "@types/yargs": "^15.0.3",
     "chai": "^4.2.0",
     "coveralls": "^3.0.9",
     "mocha": "^6.2.2",
     "nyc": "^15.0.0",
     "source-map-support": "^0.5.16",
-    "ts-node": "^8.5.4",
+    "ts-node": "^8.6.2",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   },
   "dependencies": {
     "chalk": "^3.0.0",
-    "yargs": "^15.0.2"
+    "yargs": "^15.1.0"
   }
 }
